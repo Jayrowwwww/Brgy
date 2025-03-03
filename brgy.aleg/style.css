@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 40px;
+    padding: 10px 100px;
+    position: fixed;
+    width: 100%;
+}
+
+.logo img{
+    height: 90px;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    height: 50px;
+    width: 700px;
+    padding: 0 25px;
+    border-radius: 50px;
+}
+
+.navbar ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 30px;
+    height: 35px;
+    width: 110px;
+    transition: all 90ms ease-in; 
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(54, 54, 255);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.navbar ul li:hover{
+    background-color: grey;
+}
+
+/* Landing Page */
+.landing-page{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/pic/brgyback.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.first-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 24px;
+
+    padding: 17rem 30rem 0 30rem;
+    color: white;
+}
+
+.first-content h3{
+    font-size: 30px;
+}
+
+.first-content h1{
+    padding-top: 40px;
+    font-size: 80px;
+    color: #5b9cff;
+}
+
+.first-content p{
+    padding-top: 80px;
+}
+
+.icons{
+    padding-top: 20px;
+    scale: 3;
+}
+
+.first-content button{
+    margin-top: 150px;
+    height: 65px;
+    width: 200px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+
+.first-content button a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* about  */
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    height: 30vh;
+    background-color: grey;
+    color: white;
+    text-align: center;
+}
+
+.about p{
+    padding-top: 20px;
+}
+
+/* loca */
+.location{
+    height: 100vh;
+}
