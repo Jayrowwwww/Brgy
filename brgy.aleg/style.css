@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Josefin sans';
+
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 header{
     display: flex;
     justify-content: space-evenly;
@@ -12,6 +20,7 @@ header{
     padding: 10px 100px;
     position: fixed;
     width: 100%;
+    z-index: 99;
 }
 
 .logo img{
@@ -31,13 +40,12 @@ header{
 
 .navbar ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: white;
     box-shadow: 0 1px 4px rgba(0,0,0,0.7);
     height: 50px;
     width: 700px;
-    padding: 0 25px;
     border-radius: 50px;
 }
 
@@ -48,14 +56,14 @@ header{
 
     border: none;
     border-radius: 30px;
-    height: 35px;
-    width: 110px;
+    height: 50px;
+    width: 200px;
     transition: all 90ms ease-in; 
 }
 
 .navbar ul li a{
     text-decoration: none;
-    color: rgb(54, 54, 255);
+    color: black;
     font-weight: 600;
     font-size: 20px;
 }
@@ -66,11 +74,15 @@ header{
 
 /* Landing Page */
 .landing-page{
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/pic/brgyback.jpg);
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(/pic/brgyback.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
+}
+
+#home{
+    overflow: hidden;
 }
 
 .first-content{
@@ -81,7 +93,7 @@ header{
     text-align: center;
     line-height: 24px;
 
-    padding: 17rem 30rem 0 30rem;
+    padding: 17rem 20rem 0 20rem;
     color: white;
 }
 
@@ -90,31 +102,53 @@ header{
 }
 
 .first-content h1{
-    padding-top: 40px;
-    font-size: 80px;
-    color: #5b9cff;
+    padding-top: 50px;
+    font-size: 100px;
+    color: #009BFF;
+    text-shadow: 0 1px 9px black;
 }
 
 .first-content p{
     padding-top: 80px;
+    font-weight: 300;
+    font-size: 20px;
 }
 
-.icons{
-    padding-top: 20px;
-    scale: 3;
+.cut{
+    background-color: #2C3B53;
+    height: 250px;
+    width: 110%;
+
+    rotate: -5deg;
+    margin-top: 110px;
 }
 
-.first-content button{
-    margin-top: 150px;
-    height: 65px;
+.cut p{
+    color: #2C3B53;
+}
+
+.bot{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bot button{
+    margin-top: 90px;
+    height: 60px;
     width: 200px;
     border-radius: 50px;
+    background-color: #0A49A6;
     outline: none;
-    border: none;
+    border: 1px solid white;
 }
 
-.first-content button a{
-    color: black;
+.bot button:nth-child(2){
+    background-color: transparent;
+}
+
+.bot button a{
+    color: white;
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
@@ -123,20 +157,101 @@ header{
 /* about  */
 .about{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-self: center;
+    padding: 20px;
+
     height: 30vh;
-    background-color: grey;
+    background-color: #2C3B53;
     color: white;
-    text-align: center;
 }
 
-.about p{
-    padding-top: 20px;
+.address{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0A49A6;
+    z-index: 2;
+    width: 55%;
+    height: 50px;
 }
 
-/* loca */
-.location{
+
+.location, .phone-num, .facebook{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Filing */
+.file{
     height: 100vh;
+    padding: 100px;
+    background-color: #2C3B53;
+}
+
+.title{
+    width: 1000px;
+    height: 100px;
+    padding: 20px 0 0 10px;
+    border-left: 10px solid #D9D9D9;
+    line-height: 40px;
+}
+
+.title h1{
+    color: white;
+    font-size: 40px;
+}
+
+.title h3{
+    color: red;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Document Selection */
+.doc-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding-top: 70px;
+}
+
+.doc-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.doc-content h2{
+    color: white;
+}
+
+.doc-content button{
+    height: 50px;
+    width: 160px;
+    border: 1px solid white;
+    border-radius: 30px;
+    color: white;
+    background-color: #0A49A6;
+    font-size: 20px;
+}
+
+.doc-box{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #D9D9D9;
+    height: 29rem;
+    width: 25rem;
+    border-radius: 30px;
+}
+.doc-box img{
+    height: 300px;
 }
