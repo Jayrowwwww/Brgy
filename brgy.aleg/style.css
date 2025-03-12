@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Josefin sans';
-
+    user-select: none;
 }
 
 html{
@@ -260,7 +260,7 @@ header{
 .economy{
     height: 100vh;
     background-color: #D9D9D9;
-    padding: 100px 50px 0 70px;
+    padding: 150px 50px 0 70px;
 }
 
 .economy h1{
@@ -312,11 +312,104 @@ header{
 
 /* barangay officials */
 .officials{
-    height: 100vh;
+    height: 120vh;
     background-color: #D9D9D9;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(/pic/alegria\ logo\ 1.png);
+    background-image: url(/pic/alegria\ logo\ 2.png);
     background-repeat: no-repeat;
-    background-size: 50%;
-    background-position-x: 50%;
+    background-position: center;
+    background-size: contain;
     color: white;
+}
+
+.officials h1{
+    color: #009BFF;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 100px;
+}
+
+.background-logo-alegria img{
+    height: 1080px;
+    opacity: 0.5;
+}
+
+.barangay-officials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+/* contacts */
+.contact{
+    height: 100vh;
+    background-color: #000000ad;
+    overflow-y: hidden;
+    color: white;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.container{
+    position: relative;
+}
+
+.background-video{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 280px);
+    justify-content: center;
+    align-content: center;
+    grid-row-gap: 50px;
+    grid-column-gap: 150px;
+    height: 90vh;
+    text-align: center;
+}
+
+.contact-box{
+    background-color: #2C3B53;
+    width: 250px;
+    height: 280px;
+    border-radius: 30px;
+    padding: 50px 20px;
+}
+
+.contact-box:nth-child(even){
+    background-color: #062758;
+}
+
+.contact-box p{
+    padding-top: 30px;
+}
+
+.contact h2{
+    color: white;
+    font-weight: lighter;
+}
+
+.connect{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+
+    background-color: #2C3B53;
+    height: 8vh;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.connect h1{
+    text-align: center;
+    font-weight: 400;
 }
